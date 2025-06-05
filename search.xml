@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>测试文章</title>
+      <link href="/2025/06/05/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+      <url>/2025/06/05/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="欢迎来到测试文章"><a href="#欢迎来到测试文章" class="headerlink" title="欢迎来到测试文章"></a>欢迎来到测试文章</h2><p>这是一篇测试文章，用于展示Hexo博客的基本功能。</p><h3 id="1-文本格式"><a href="#1-文本格式" class="headerlink" title="1. 文本格式"></a>1. 文本格式</h3><p>这是<strong>粗体文本</strong>，这是<em>斜体文本</em>，这是<em><strong>粗斜体文本</strong></em>。</p><p>这是<code>行内代码</code>示例。</p><h3 id="2-代码块演示"><a href="#2-代码块演示" class="headerlink" title="2. 代码块演示"></a>2. 代码块演示</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello, Hexo!&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">sayHello</span>();</span><br></pre></td></tr></table></figure><h3 id="3-列表演示"><a href="#3-列表演示" class="headerlink" title="3. 列表演示"></a>3. 列表演示</h3><p>无序列表:</p><ul><li>项目1</li><li>项目2</li><li>项目3</li></ul><p>有序列表:</p><ol><li>第一步</li><li>第二步</li><li>第三步</li></ol><h3 id="4-引用演示"><a href="#4-引用演示" class="headerlink" title="4. 引用演示"></a>4. 引用演示</h3><blockquote><p>这是一段引用文本。</p><p>引用可以包含多个段落。</p></blockquote><h3 id="5-图片演示"><a href="#5-图片演示" class="headerlink" title="5. 图片演示"></a>5. 图片演示</h3><p><img src="/img/%E3%80%90%E5%93%B2%E9%A3%8E%E5%A3%81%E7%BA%B8%E3%80%91AI-%E7%B4%AB%E8%89%B2%E7%B3%BB%E4%BA%BA%E7%89%A9.png" alt="图片描述"></p><h3 id="6-链接演示"><a href="#6-链接演示" class="headerlink" title="6. 链接演示"></a>6. 链接演示</h3><p><a href="https://github.com/MY-Final">访问我的GitHub</a></p><hr><p>感谢阅读这篇测试文章！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+            <tag> 示例 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2025/06/05/hello-world/"/>
       <url>/2025/06/05/hello-world/</url>
