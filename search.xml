@@ -17,6 +17,19 @@
     
     
     <entry>
+      <title>Hello, World!</title>
+      <link href="/2025/06/06/hello-world/"/>
+      <url>/2025/06/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hello-World-🌍"><a href="#Hello-World-🌍" class="headerlink" title="Hello, World! 🌍"></a>Hello, World! 🌍</h1><p>这是一个示例 Markdown 文件，展示 Markdown 的主要用法。</p><h2 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1. 代码块"></a>1. 代码块</h2><h3 id="Java-示例"><a href="#Java-示例" class="headerlink" title="Java 示例"></a>Java 示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="2-列表"><a href="#2-列表" class="headerlink" title="2. 列表"></a>2. 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul><li>Java</li><li>Python</li><li>C++</li><li>JavaScript</li></ul><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol><li>下载 JDK</li><li>配置环境变量</li><li>编写 Java 代码</li><li>运行代码</li></ol><h2 id="3-强调"><a href="#3-强调" class="headerlink" title="3. 强调"></a>3. 强调</h2><p><strong>这是加粗文本</strong><br><em>这是斜体文本</em><br><del>这是删除线文本</del></p><h2 id="4-链接"><a href="#4-链接" class="headerlink" title="4. 链接"></a>4. 链接</h2><p><a href="https://www.java.com/">访问 Java 官方网站</a></p><h2 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h2><p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/120px-Java_programming_language_logo.svg.png" alt="Java Logo"></p><h2 id="6-表格"><a href="#6-表格" class="headerlink" title="6. 表格"></a>6. 表格</h2><table><thead><tr><th>语言</th><th>类型</th><th>特点</th></tr></thead><tbody><tr><td>Java</td><td>编译型</td><td>面向对象</td></tr><tr><td>Python</td><td>解释型</td><td>易读易用</td></tr><tr><td>C++</td><td>编译型</td><td>高性能</td></tr><tr><td>JavaScript</td><td>解释型</td><td>适用于前端</td></tr></tbody></table><h2 id="7-引用"><a href="#7-引用" class="headerlink" title="7. 引用"></a>7. 引用</h2><blockquote><p>“Java 是世界上最流行的编程语言之一。” — 开发者社区</p></blockquote><h2 id="8-分割线"><a href="#8-分割线" class="headerlink" title="8. 分割线"></a>8. 分割线</h2><hr>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>测试文章</title>
       <link href="/2025/06/05/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
       <url>/2025/06/05/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
