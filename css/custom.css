@@ -97,3 +97,29 @@
       padding: 10px 0;
     }
   }
+
+/* Twikoo评论区样式优化 */
+.tk-content img,
+.tk-preview img,
+.tk-preview-container img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+/* 针对评论预览区域的额外控制 */
+.tk-preview-container {
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 确保评论区的整体宽度不超出 */
+.tk-comment, 
+.tk-comments-container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
