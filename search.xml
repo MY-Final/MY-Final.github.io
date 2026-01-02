@@ -11,6 +11,47 @@
         <content type="html"><![CDATA[<h2 id="1：Install-n8n-using-npm"><a href="#1：Install-n8n-using-npm" class="headerlink" title="1：Install n8n using npm"></a>1：Install n8n using npm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install n8n -g</span><br></pre></td></tr></table></figure><hr><h2 id="2：When-you-are-ready-to-test-your-node-publish-it-locally"><a href="#2：When-you-are-ready-to-test-your-node-publish-it-locally" class="headerlink" title="2：When you are ready to test your node, publish it locally"></a>2：When you are ready to test your node, publish it locally</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm <span class="built_in">link</span></span><br></pre></td></tr></table></figure><hr><h2 id="3：Install-the-node-into-your-local-n8n-instance"><a href="#3：Install-the-node-into-your-local-n8n-instance" class="headerlink" title="3：Install the node into your local n8n instance"></a>3：Install the node into your local n8n instance</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># In the nodes directory within your n8n installation</span></span><br><span class="line"><span class="comment"># node-package-name is the name from the package.json</span></span><br><span class="line">npm <span class="built_in">link</span> &lt;node-package-name&gt;</span><br></pre></td></tr></table></figure><hr><h2 id="Start-n8n"><a href="#Start-n8n" class="headerlink" title="Start n8n"></a>Start n8n</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n8n start</span><br></pre></td></tr></table></figure><hr><p><a href="https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/">n8n 官方文档页面</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> n8n </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> n8n </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Portainer 与 Docker 29 版本兼容性问题解决方案</title>
+      <link href="/2026/01/02/Portainer%20%E4%B8%8E%20Docker%2029%20%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%20%E7%9A%84md/"/>
+      <url>/2026/01/02/Portainer%20%E4%B8%8E%20Docker%2029%20%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%20%E7%9A%84md/</url>
+      
+        <content type="html"><![CDATA[<p>参考链接：</p><ol><li><a href="https://www.cnblogs.com/aheadalot/p/19226699">解决Portainer在Docker更新后无法连接local环境 - Duckling8113 - 博客园</a></li><li><a href="https://www.reddit.com/r/docker/comments/1ounfw8/docker_29_api_changes_breaking_changes/">Docker 29 API Changes (Breaking Changes) : r&#x2F;docker</a></li></ol><h2 id="1-Docker-升级至-29-后出现的-Local-环境不可用问题"><a href="#1-Docker-升级至-29-后出现的-Local-环境不可用问题" class="headerlink" title="1. Docker 升级至 29 后出现的 Local 环境不可用问题"></a>1. Docker 升级至 29 后出现的 Local 环境不可用问题</h2><p>在 Docker 升级至 <strong>29.x</strong> 后，Portainer 可能无法连接到本地 Docker 环境，提示：</p><p><strong>Environment local is unreachable</strong></p><p>这是由于 <strong>Docker API 最低版本要求变化</strong>，Portainer 无法正常访问 Docker Engine API 所致。</p><hr><h2 id="2-解决方案：指定-Docker-最低-API-版本"><a href="#2-解决方案：指定-Docker-最低-API-版本" class="headerlink" title="2. 解决方案：指定 Docker 最低 API 版本"></a>2. 解决方案：指定 Docker 最低 API 版本</h2><h3 id="步骤-1：修改-docker-service"><a href="#步骤-1：修改-docker-service" class="headerlink" title="步骤 1：修改 docker.service"></a>步骤 1：修改 docker.service</h3><p>执行命令创建或编辑 systemd drop-in 配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl edit docker.service</span><br></pre></td></tr></table></figure><p>添加以下内容以声明 Docker Engine 的最低 API 版本：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=DOCKER_MIN_API_VERSION=<span class="number">1.24</span></span><br></pre></td></tr></table></figure><p>（这将覆盖 Docker 的默认最小 API 版本，使 Portainer 能继续使用旧版 API 接口）</p><hr><h3 id="步骤-2：重启-Docker-服务"><a href="#步骤-2：重启-Docker-服务" class="headerlink" title="步骤 2：重启 Docker 服务"></a>步骤 2：重启 Docker 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart docker</span><br></pre></td></tr></table></figure><hr><h2 id="4-验证结果"><a href="#4-验证结果" class="headerlink" title="4. 验证结果"></a>4. 验证结果</h2><p>重启 Docker 后，Portainer 将重新建立与本地 Docker 引擎的连接。<br>访问 Portainer UI，你将看到 Local 环境已恢复可用。</p><hr><p><a href="../../docker%20%E5%AE%89%E8%A3%85/Docker-CE%20%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">Docker-CE 安装指南</a><br><a href="Portainer%20%E5%AE%89%E8%A3%85.md">Portainer 安装</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Portainer </tag>
+            
+            <tag> 运维 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -38,35 +79,6 @@
             <tag> 教程 </tag>
             
             <tag> 示例 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Portainer 与 Docker 29 版本兼容性问题解决方案</title>
-      <link href="/2025/01/02/Portainer%20%E4%B8%8E%20Docker%2029%20%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%20%E7%9A%84md/"/>
-      <url>/2025/01/02/Portainer%20%E4%B8%8E%20Docker%2029%20%E7%89%88%E6%9C%AC%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%20%E7%9A%84md/</url>
-      
-        <content type="html"><![CDATA[<p>参考链接：</p><ol><li><a href="https://www.cnblogs.com/aheadalot/p/19226699">解决Portainer在Docker更新后无法连接local环境 - Duckling8113 - 博客园</a></li><li><a href="https://www.reddit.com/r/docker/comments/1ounfw8/docker_29_api_changes_breaking_changes/">Docker 29 API Changes (Breaking Changes) : r&#x2F;docker</a></li></ol><h2 id="1-Docker-升级至-29-后出现的-Local-环境不可用问题"><a href="#1-Docker-升级至-29-后出现的-Local-环境不可用问题" class="headerlink" title="1. Docker 升级至 29 后出现的 Local 环境不可用问题"></a>1. Docker 升级至 29 后出现的 Local 环境不可用问题</h2><p>在 Docker 升级至 <strong>29.x</strong> 后，Portainer 可能无法连接到本地 Docker 环境，提示：</p><p><strong>Environment local is unreachable</strong></p><p>这是由于 <strong>Docker API 最低版本要求变化</strong>，Portainer 无法正常访问 Docker Engine API 所致。</p><hr><h2 id="2-解决方案：指定-Docker-最低-API-版本"><a href="#2-解决方案：指定-Docker-最低-API-版本" class="headerlink" title="2. 解决方案：指定 Docker 最低 API 版本"></a>2. 解决方案：指定 Docker 最低 API 版本</h2><h3 id="步骤-1：修改-docker-service"><a href="#步骤-1：修改-docker-service" class="headerlink" title="步骤 1：修改 docker.service"></a>步骤 1：修改 docker.service</h3><p>执行命令创建或编辑 systemd drop-in 配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl edit docker.service</span><br></pre></td></tr></table></figure><p>添加以下内容以声明 Docker Engine 的最低 API 版本：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=DOCKER_MIN_API_VERSION=<span class="number">1.24</span></span><br></pre></td></tr></table></figure><p>（这将覆盖 Docker 的默认最小 API 版本，使 Portainer 能继续使用旧版 API 接口）</p><hr><h3 id="步骤-2：重启-Docker-服务"><a href="#步骤-2：重启-Docker-服务" class="headerlink" title="步骤 2：重启 Docker 服务"></a>步骤 2：重启 Docker 服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart docker</span><br></pre></td></tr></table></figure><hr><h2 id="4-验证结果"><a href="#4-验证结果" class="headerlink" title="4. 验证结果"></a>4. 验证结果</h2><p>重启 Docker 后，Portainer 将重新建立与本地 Docker 引擎的连接。<br>访问 Portainer UI，你将看到 Local 环境已恢复可用。</p><hr><p><a href="../../docker%20%E5%AE%89%E8%A3%85/Docker-CE%20%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">Docker-CE 安装指南</a><br><a href="Portainer%20%E5%AE%89%E8%A3%85.md">Portainer 安装</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Docker </tag>
-            
-            <tag> Portainer </tag>
-            
-            <tag> 运维 </tag>
             
         </tags>
       
