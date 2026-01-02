@@ -1,17 +1,37 @@
+# ===================== 系统自动生成的缓存文件 =====================
+# Mac系统专属缓存文件
 .DS_Store
+# Windows系统专属缓存文件/缩略图缓存
 Thumbs.db
-db.json
-*.log
-node_modules/
+# Windows系统空文件占位符
+NUL
+
+# ===================== Hexo 博客核心产物/配置 =====================
+# Hexo打包生成的静态网页文件（核心！仓库绝对不能提交，体积超大）
 public/
+# Hexo的数据缓存文件，自动生成，无需提交
+db.json
+# Hexo的部署缓存目录(兼容新旧版本，全匹配)
 .deploy*/
+.deploy_git/
+# Hexo多环境配置文件
 _multiconfig.yml
+# Hexo的日志文件
+*.log
 
-# for vscode
+# ===================== Node.js 依赖包 =====================
+node_modules/
+
+# ===================== 各类编辑器/IDE 配置文件 =====================
+# IDEA/WebStorm 编辑器
+.idea/
+# VS Code 编辑器
 .vscode/
-
-# for claude
+# Claude AI 插件缓存目录
 .claude/
 
-#for null
-nul
+# ===================== 通用冗余文件 =====================
+*.orig
+# 临时备份文件
+*.bak
+*.tmp
