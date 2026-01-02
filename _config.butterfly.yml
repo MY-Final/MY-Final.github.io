@@ -37,7 +37,7 @@ social:
   fas fa-envelope: mailto:my3486159271@gmail.com || Email || '#4a7dbe'
 
 # ========== 头像与图标设置 ==========
-favicon: /img/favicon.png
+favicon: /img/【哲风壁纸】个性头像-人物 (1).png
 
 avatar:
   img: /img/【哲风壁纸】个性头像-人物 (1).png
@@ -95,11 +95,17 @@ index_site_info_top:
 index_top_img_height:
 
 subtitle:
-  enable: false
+  enable: true
   effect: true
   typed_option:
+    loop: true
+    typeSpeed: 100
+    backSpeed: 50
   source: false
   sub:
+    - 欢迎来到 Final 的小站 🎉
+    - 记录技术成长与生活点滴
+    - Stay hungry, Stay foolish
 
 index_layout: 3
 
