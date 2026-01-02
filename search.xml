@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>n8n 本地安装与自定义节点调试流程</title>
+      <link href="/2026/01/02/n8n-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8A%82%E7%82%B9%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/"/>
+      <url>/2026/01/02/n8n-%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8A%82%E7%82%B9%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1：Install-n8n-using-npm"><a href="#1：Install-n8n-using-npm" class="headerlink" title="1：Install n8n using npm"></a>1：Install n8n using npm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install n8n -g</span><br></pre></td></tr></table></figure><hr><h2 id="2：When-you-are-ready-to-test-your-node-publish-it-locally"><a href="#2：When-you-are-ready-to-test-your-node-publish-it-locally" class="headerlink" title="2：When you are ready to test your node, publish it locally"></a>2：When you are ready to test your node, publish it locally</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm <span class="built_in">link</span></span><br></pre></td></tr></table></figure><hr><h2 id="3：Install-the-node-into-your-local-n8n-instance"><a href="#3：Install-the-node-into-your-local-n8n-instance" class="headerlink" title="3：Install the node into your local n8n instance"></a>3：Install the node into your local n8n instance</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># In the nodes directory within your n8n installation</span></span><br><span class="line"><span class="comment"># node-package-name is the name from the package.json</span></span><br><span class="line">npm <span class="built_in">link</span> &lt;node-package-name&gt;</span><br></pre></td></tr></table></figure><hr><h2 id="Start-n8n"><a href="#Start-n8n" class="headerlink" title="Start n8n"></a>Start n8n</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n8n start</span><br></pre></td></tr></table></figure><hr><p><a href="https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/">n8n 官方文档页面</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown 语法速查与示例</title>
       <link href="/2025/06/06/Markdown%20%E8%AF%AD%E6%B3%95%E9%80%9F%E6%9F%A5%E4%B8%8E%E7%A4%BA%E4%BE%8B/"/>
       <url>/2025/06/06/Markdown%20%E8%AF%AD%E6%B3%95%E9%80%9F%E6%9F%A5%E4%B8%8E%E7%A4%BA%E4%BE%8B/</url>
