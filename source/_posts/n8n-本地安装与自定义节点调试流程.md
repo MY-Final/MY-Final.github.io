@@ -2,6 +2,9 @@
 title: n8n 本地安装与自定义节点调试流程
 date: 2026-01-02 23:15:10
 tags:
+  - n8n
+categories:
+  - n8n
 ---
 ## 1：Install n8n using npm
 ```bash
