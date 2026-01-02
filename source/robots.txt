@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /downloads/
+Disallow: /images/
+Allow: /
+
+Sitemap: https://myfinal.xyz/sitemap.xml
+Sitemap: https://myfinal.xyz/baidu-sitemap.xml

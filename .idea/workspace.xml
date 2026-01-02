@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="922608ad-6605-4b5e-8fc3-11e7e6036355" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/_global/function.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/_global/function.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/_global/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/_global/index.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/_layout/head.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/_layout/head.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/_mode/darkmode.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/_mode/darkmode.styl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/butterfly/source/css/var.styl" beforeDir="false" afterPath="$PROJECT_DIR$/themes/butterfly/source/css/var.styl" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/themes/butterfly" source="source" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/themes/butterfly" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/butterfly" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MY-Final"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jerryc127/hexo-theme-butterfly.git",
+    "accountId": "6b3dda33-4a89-4aff-8e24-aa5486c2fb67"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="37hk1J1LSFAgBaQSR1cEcYuuAn4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "hexo/blog-source",
+    "junie.onboarding.icon.badge.shown": "true",
+    "nodejs_package_manager_path": "yarn",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="922608ad-6605-4b5e-8fc3-11e7e6036355" name="更改" comment="" />
+      <created>1767362478465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1767362478465</updated>
+      <workItem from="1767362483693" duration="330000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

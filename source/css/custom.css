@@ -1,0 +1,347 @@
+/* 页脚渐变背景与玻璃质感 */
+#footer {
+    background: linear-gradient(135deg, #8A2BE2, #9370DB, #BA55D3); /* 鲜艳的紫色渐变 */
+    color: #FFFFFF; /* 纯白色文字 */
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+    border-top: 2px solid rgba(216, 191, 216, 0.7); /* 明显的分隔线 */
+    backdrop-filter: blur(8px); /* 增强玻璃质感 */
+  }
+  
+  /* 动态背景 - 流动光晕效果 */
+  #footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: pulseAndRotate 10s linear infinite; /* 脉冲 + 旋转动画 */
+    z-index: 1;
+  }
+  
+  @keyframes pulseAndRotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+      opacity: 0.5;
+    }
+  }
+  
+  /* 粒子动画（可选增强效果） */
+  #footer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVQYV2NkYGD4z8DAwMgAB//+AFB4X0QAXwAAAKEEQ9E0tQAAAABJRU5ErkJggg==') repeat; /* 白色粒子 */
+    opacity: 0.1;
+    animation: floatParticles 15s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes floatParticles {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+  
+  #footer-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  /* 增强文字样式 */
+  #footer #footer-wrap .copyright,
+  #footer #footer-wrap .framework-info {
+    text-shadow: 
+      0 1px 2px rgba(0, 0, 0, 0.3), 
+      0 0 5px rgba(128, 0, 128, 0.2); /* 更精致的双层阴影 */
+    font-weight: 500; /* 降低字重以提高可读性 */
+    font-size: 15px;
+    padding: 0 15px;
+    transition: all 0.3s ease; /* 添加悬停动画 */
+    letter-spacing: 0.5px; /* 增加字母间距提高可读性 */
+  }
+  
+  #footer #footer-wrap .copyright:hover,
+  #footer #footer-wrap .framework-info:hover {
+    transform: scale(1.05); /* 轻微放大效果 */
+    text-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.2), 
+      0 0 8px rgba(138, 43, 226, 0.4); /* 悬停时更明显的发光效果 */
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    #footer #footer-wrap .copyright,
+    #footer #footer-wrap .framework-info {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+    }
+    #footer {
+      padding: 10px 0;
+    }
+  }
+
+/* Twikoo评论区样式优化 */
+.tk-content img,
+.tk-preview img,
+.tk-preview-container img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+/* 针对评论预览区域的额外控制 */
+.tk-preview-container {
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 确保评论区的整体宽度不超出 */
+.tk-comment, 
+.tk-comments-container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* 自定义代码块样式 */
+/* 代码块主题样式 */
+:root {
+  --hl-color: #3e3e3e;
+  --hl-bg: #f9f9f9;
+  --hltools-bg: #f0f0f0;
+  --hltools-color: #525252;
+  --hlnumber-bg: #f6f6f6;
+  --hlnumber-color: #888;
+  --hlscrollbar-bg: #ccc;
+  --hlexpand-bg: linear-gradient(180deg, rgba(249, 249, 249, 0.6), rgba(249, 249, 249, 0.9));
+}
+
+/* 深色模式的代码块样式 */
+[data-theme="dark"] {
+  --hl-color: #e0e0e0;
+  --hl-bg: #282c34;
+  --hltools-bg: #21252b;
+  --hltools-color: #a0a0a0;
+  --hlnumber-bg: #282c34;
+  --hlnumber-color: #7d8799;
+  --hlscrollbar-bg: #4e5666;
+  --hlexpand-bg: linear-gradient(180deg, rgba(40, 44, 52, 0.6), rgba(40, 44, 52, 0.9));
+}
+
+/* 代码块字体和大小 */
+.container pre,
+.container code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* 代码块圆角和阴影 */
+figure.highlight {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 25px !important;
+  overflow: hidden;
+}
+
+/* 代码块工具栏 */
+.highlight-tools {
+  padding: 0 12px !important;
+  height: 2.5em !important;
+  background: var(--hltools-bg) !important;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* 代码语言显示 */
+.highlight-tools .code-lang {
+  font-weight: 600 !important;
+  color: var(--hltools-color);
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 代码行号样式 */
+.gutter {
+  padding: 0 10px !important;
+  background: var(--hlnumber-bg) !important;
+  border-right: 1px solid rgba(127, 127, 127, 0.1);
+}
+
+.gutter pre {
+  color: var(--hlnumber-color) !important;
+  font-size: 0.85em !important;
+}
+
+/* 代码内容样式 */
+.code pre {
+  padding-left: 15px !important;
+}
+
+/* 滚动条样式 */
+figure.highlight::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+figure.highlight::-webkit-scrollbar-thumb {
+  background: var(--hlscrollbar-bg);
+  border-radius: 4px;
+}
+
+figure.highlight::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 代码块中的inline code样式 */
+p code, li code, td code {
+  background: rgba(127, 127, 127, 0.1) !important;
+  color: #e83e8c !important;
+  padding: 2px 5px !important;
+  border-radius: 3px !important;
+  font-size: 0.9em !important;
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace !important;
+}
+
+/* 为BASH块添加特殊样式 */
+.language-bash .highlight-tools .code-lang,
+.language-sh .highlight-tools .code-lang {
+  color: #27ae60 !important;
+}
+
+.language-bash,
+.language-sh {
+  background: #2d3436 !important;
+  color: #f0f0f0 !important;
+}
+
+.language-bash .gutter,
+.language-sh .gutter {
+  background: #1e272e !important;
+}
+
+[data-theme="dark"] .language-bash,
+[data-theme="dark"] .language-sh {
+  background: #1a1a1a !important;
+}
+
+/* 代码高亮主题颜色 - 通用语言 */
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999 !important;
+}
+
+.token.punctuation {
+  color: #555 !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol {
+  color: #905 !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin {
+  color: #690 !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #9a6e3a !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #07a !important;
+}
+
+.token.regex,
+.token.important {
+  color: #e90 !important;
+}
+
+/* 深色模式下的代码高亮 */
+[data-theme="dark"] .token.comment,
+[data-theme="dark"] .token.block-comment,
+[data-theme="dark"] .token.prolog,
+[data-theme="dark"] .token.doctype,
+[data-theme="dark"] .token.cdata {
+  color: #7c848e !important;
+}
+
+[data-theme="dark"] .token.punctuation {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .token.property,
+[data-theme="dark"] .token.tag,
+[data-theme="dark"] .token.boolean,
+[data-theme="dark"] .token.number,
+[data-theme="dark"] .token.function-name,
+[data-theme="dark"] .token.constant,
+[data-theme="dark"] .token.symbol {
+  color: #ff79c6 !important;
+}
+
+[data-theme="dark"] .token.selector,
+[data-theme="dark"] .token.attr-name,
+[data-theme="dark"] .token.string,
+[data-theme="dark"] .token.char,
+[data-theme="dark"] .token.function,
+[data-theme="dark"] .token.builtin {
+  color: #a6e22e !important;
+}
+
+[data-theme="dark"] .token.operator,
+[data-theme="dark"] .token.entity,
+[data-theme="dark"] .token.url,
+[data-theme="dark"] .token.variable {
+  color: #f1fa8c !important;
+}
+
+[data-theme="dark"] .token.atrule,
+[data-theme="dark"] .token.attr-value,
+[data-theme="dark"] .token.keyword,
+[data-theme="dark"] .token.class-name {
+  color: #66d9ef !important;
+}

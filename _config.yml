@@ -1,0 +1,130 @@
+# Hexo 配置文件
+## 文档: https://hexo.io/docs/configuration.html
+## 源码: https://github.com/hexojs/hexo/
+
+# ========== 网站基础设置 ==========
+# Site
+title: Final                    # 网站标题（显示在浏览器标签页和首页）
+subtitle: ''                    # 副标题（部分主题会在首页显示）
+description: '个人技术博客与生活笔记 - 记录学习成长点滴'  # 网站描述（用于SEO和元标签）
+keywords: 个人博客,技术笔记,编程学习,生活记录  # 网站关键词（逗号分隔，用于SEO）
+author: Final                   # 作者名
+language: zh-CN                 # 网站语言（简体中文）
+timezone: ''                    # 时区（留空使用系统时区）
+
+# ========== 网址与链接设置 ==========
+# URL
+url: https://myfinal.xyz          # 网站完整URL（用于生成绝对链接）
+permalink: :year/:month/:day/:title/  # 文章永久链接格式（年/月/日/标题/）
+permalink_defaults:              # 默认的永久链接参数
+pretty_urls:
+  trailing_index: false           # 移除URL末尾的index.html（SEO优化）
+  trailing_html: false            # 移除URL末尾的.html（SEO优化）
+
+# ========== 目录结构设置 ==========
+# Directory
+source_dir: source               # 源文件目录（存放文章和资源）
+public_dir: public               # 生成的静态文件目录（部署时使用）
+tag_dir: tags                    # 标签页目录
+archive_dir: archives            # 归档页目录
+category_dir: categories         # 分类页目录
+code_dir: downloads/code         # 代码下载目录
+i18n_dir: :lang                  # 国际化目录
+skip_render:                     # 跳过渲染的文件/目录
+
+# ========== 文章写作设置 ==========
+# Writing
+new_post_name: :title.md          # 新文章文件名格式（:title.md 表示用标题做文件名）
+default_layout: post              # 默认文章布局（post=文章页）
+titlecase: false                  # 标题转大写（英文用）
+external_link:
+  enable: true                    # 外链在新标签页打开
+  field: site                     # 全站生效
+  exclude: ''                     # 排除的域名
+filename_case: 0                  # 文件名大小写转换（0=不转换）
+render_drafts: false              # 不渲染草稿
+post_asset_folder: false          # 文章资源文件夹（false=不创建）
+relative_link: false              # 相对链接
+future: true                      # 允许发布未来日期的文章
+syntax_highlighter: highlight.js  # 代码高亮引擎（highlight.js）
+highlight:                        # highlight.js 配置
+  line_number: true               # 显示行号
+  auto_detect: false              # 自动检测语言
+  tab_replace: ''                 # Tab替换为空格
+  wrap: true                      # 代码块换行
+  hljs: false                     # 使用hljs风格
+prismjs:                          # PrismJS 配置（如果启用）
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# ========== 首页设置 ==========
+# Home page setting
+index_generator:
+  path: ''                        # 首页路径
+  per_page: 10                    # 每页显示10篇文章
+  order_by: -date                 # 按日期倒序排列（最新在前）
+
+# ========== 分类与标签设置 ==========
+# Category & Tag
+default_category: uncategorized   # 默认分类名
+category_map:                     # 分类映射（空表示不映射）
+tag_map:                          # 标签映射（空表示不映射）
+
+# ========== 元数据生成器 (SEO) ==========
+# Metadata elements
+meta_generator: false             # 【SEO优化】关闭Hexo生成器标签（减少HTML冗余信息）
+
+# ========== Sitemap 生成器 (SEO) ==========
+sitemap:
+  path: sitemap.xml               # 网站地图（提交给Google/Bing）
+
+baidu_sitemap:
+  path: baidu-sitemap.xml         # 百度专属地图
+
+# ========== 日期时间格式 ==========
+# Date / Time format
+date_format: YYYY-MM-DD           # 日期格式（2025-06-17）
+time_format: HH:mm:ss             # 时间格式（22:30:45）
+updated_option: 'mtime'           # 更新时间选项（mtime=文件修改时间）
+
+# ========== 分页设置 ==========
+# Pagination
+per_page: 10                      # 每页显示文章数（0=禁用分页）
+pagination_dir: page              # 分页目录名
+
+# ========== 文件包含/排除 ==========
+# Include / Exclude file(s)
+include:                          # 包含的文件/目录
+exclude:                          # 排除的文件/目录
+ignore:                           # 忽略的文件/目录
+
+# ========== 插件与主题扩展 ==========
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: butterfly                  # 使用的主题（Butterfly）
+
+# ========== 部署设置 ==========
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: 'git'                     # 部署方式（Git）
+  repo: git@github.com:MY-Final/MY-Final.github.io.git  # 仓库地址
+  branch: main                    # 部署分支
+
+# ========== 本地搜索配置 ==========
+search:
+  path: search.xml                # 搜索索引文件名
+  field: post                     # 搜索范围（post=文章）
+  content: true                   # 包含内容搜索
+  format: html                    # 输出格式
+
+# ========== MathJax 数学公式渲染 ==========
+mathjax:
+  tags: none                      # 公式编号方式（none/ams/all）
+  single_dollars: true            # 允许单个 $ 作为行内公式
+  cjk_width: 0.9                  # CJK 字符宽度
+  normal_width: 0.6               # 普通字符宽度
+  append_css: true                # 自动添加 CSS
+  every_page: false               # 是否每页都加载（false=按需加载）

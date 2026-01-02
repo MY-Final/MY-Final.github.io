@@ -1,0 +1,557 @@
+# =========================================
+# Butterfly 主题配置文件
+# 文档: https://butterfly.js.org/ (中文)
+# =========================================
+
+# ========== 导航栏设置 ==========
+nav:
+  logo:                          # 导航栏Logo图片地址（留空显示标题）
+  display_title: true            # 显示网站标题
+  fixed: true                    # 固定导航栏（滚动时始终在顶部）
+  search: true                   # 启用搜索按钮
+
+menu:                            # 导航菜单配置
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  留言板: /messageboard/ || fas fa-comment
+  友链: /link/ || fas fa-link
+  关于: /about/ || fas fa-heart
+
+# ========== 代码块设置 ==========
+code_blocks:
+  theme: light
+  macStyle: false
+  height_limit: false
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
+
+# ========== 社交链接设置 ==========
+social:
+  fab fa-github: https://github.com/MY-Final || Github || '#24292e'
+  fab fa-twitter: https://twitter.com/my_final_my || Twitter || '#1DA1F2'
+  fas fa-envelope: mailto:my3486159271@gmail.com || Email || '#4a7dbe'
+
+# ========== 头像与图标设置 ==========
+favicon: /img/favicon.png
+
+avatar:
+  img: /img/【哲风壁纸】个性头像-人物 (1).png
+  effect: false
+
+# ========== 顶部横幅图片设置 ==========
+disable_top_img: false
+default_top_img: /img/【哲风壁纸】AI-紫色系人物.png
+index_img: /img/【哲风壁纸】SNAFFUR-动漫少女.png
+archive_img: /img/【哲风壁纸】瞳-红色.png
+tag_img: /img/【哲风壁纸】AI-紫色系人物.png
+tag_per_img:
+category_img: /img/【哲风壁纸】AI-紫色系人物.png
+category_per_img:
+footer_img: false
+background: '/img/【哲风壁纸】二次元-原神-躺姿.png'
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: false
+  subtitle: 'Page Not Found'
+  background: /img/error-page.png
+
+# 文章元数据显示位置
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+    wordcount: true
+    min2read: true
+
+# ===================================
+# Index page settings
+# ===================================
+index_site_info_top:
+index_top_img_height:
+
+subtitle:
+  enable: false
+  effect: true
+  typed_option:
+  source: false
+  sub:
+
+index_layout: 3
+
+index_post_content:
+  method: 3
+  length: 500
+
+# ========== 文章设置 ==========
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+reward:
+  enable: true
+  text: 赞赏一下
+  QR_code:
+    - img: /img/wechat-pay.jpg
+      link:
+      text: 微信赞赏
+    - img: /img/qq-pay.jpg
+      link:
+      text: QQ收款
+    - img: /img/zfb-pay.jpg
+      link:
+      text: 支付宝赞赏
+
+post_edit:
+  enable: false
+  url:
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+post_pagination: 1
+
+noticeOutdate:
+  enable: false
+  style: flat
+  limit_day: 365
+  position: top
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+# ========== 页脚设置 ==========
+footer:
+  owner:
+    enable: true
+    since: 2019
+  custom_text:
+  copyright: false
+
+# ========== 侧边栏设置 ==========
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+
+  card_author:
+    enable: true
+    description: 小菜日记
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 给star！求求啦！
+      link: https://github.com/MY-Final
+
+  card_announcement:
+    enable: true
+    content: 懒，不知道写啥
+
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+
+  card_newest_comments:
+    enable: false
+    limit: 6
+    storage: 10
+    avatar: true
+
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    orderby: random
+    order: 1
+    sort_order:
+
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: 'date'
+    order: -1
+
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    wordcount: true
+    runtime: false
+    runtime_date:
+    sort_order:
+
+# ========== 右侧功能按钮设置 ==========
+translate:
+  enable: false
+  default: 繁
+  defaultEncoding: 2
+  translateDelay: 0
+  msgToTraditionalChinese: '繁'
+  msgToSimplifiedChinese: '簡'
+
+readmode: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+  start:
+  end:
+
+rightside_scroll_percent: false
+
+rightside_item_order:
+  enable: false
+  hide:
+  show:
+
+# ========== 全局设置 ==========
+anchor:
+  auto_update: false
+  click_to_scroll: false
+
+photofigcaption: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 150
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: true
+
+# ========== 数学公式 ==========
+math:
+  use:
+  per_page: true
+  hide_scrollbar: false
+
+  mathjax:
+    enableMenu: true
+    tags: none
+
+  katex:
+    copy_tex: false
+
+# ========== 搜索设置 ==========
+search:
+  use: local_search
+  placeholder: 搜索文章...
+
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    CDN:
+
+# ========== 分享系统 ==========
+share:
+  use: sharejs
+
+  sharejs:
+    sites: facebook,twitter,wechat,weibo,qq
+
+  addtoany:
+    item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+
+# ========== 评论系统 ==========
+comments:
+  text: true
+  lazyload: false
+  count: true
+  card_post_count: true
+
+# ========== 聊天服务 ==========
+chat:
+  use:
+  rightside_button: false
+  button_hide_show: false
+
+# ========== 数据分析 ==========
+baidu_analytics:
+google_analytics:
+cloudflare_analytics:
+microsoft_clarity:
+
+umami_analytics:
+  enable: false
+  serverURL:
+  website_id:
+  UV_PV:
+    site_uv: false
+    site_pv: false
+    page_pv: false
+  token:
+
+# ========== 广告设置 ==========
+google_adsense:
+  enable: false
+  auto_ads: true
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client:
+  enable_page_level_ads: true
+
+ad:
+  index:
+  aside:
+  post:
+
+# ========== 主题美化与特效 ==========
+theme_color:
+  enable: true
+  main: "#9370DB"
+  paginator: "#9370DB"
+  button_hover: "#BA55D3"
+  text_selection: "#D8BFD8"
+  link_color: "#8A2BE2"
+  meta_color: "#9370DB"
+  hr_color: "#BA55D3"
+  code_foreground: "#9932CC"
+  code_background: "rgba(147, 112, 219, .05)"
+  toc_color: "#9370DB"
+  blockquote_padding_color: "#9370DB"
+  blockquote_background_color: "#E6E6FA"
+  scrollbar_color: "#9370DB"
+  meta_theme_color_light: "ffffff"
+  meta_theme_color_dark: "#0d0d0d"
+
+category_ui:
+tag_ui:
+rounded_corners_ui: true
+text_align_justify: false
+
+mask:
+  header: true
+  footer: true
+
+preloader:
+  enable: false
+  source: 1
+  pace_css_url:
+
+enter_transitions: true
+display_mode: light
+
+beautify:
+  enable: false
+  field: post
+  title_prefix_icon:
+  title_prefix_icon_color:
+
+font:
+  global_font_size:
+  code_font_size:
+  font_family:
+  code_font_family:
+
+blog_title_font:
+  font_link:
+  font_family:
+
+hr_icon:
+  enable: true
+  icon:
+  icon_top:
+
+activate_power_mode:
+  enable: false
+  colorful: true
+  shake: true
+  mobile: false
+
+# ========== 背景特效 ==========
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
+canvas_fluttering_ribbon:
+  enable: false
+  mobile: false
+
+canvas_nest:
+  enable: false
+  color: '0,0,255'
+  opacity: 0.7
+  zIndex: -1
+  count: 99
+  mobile: false
+
+fireworks:
+  enable: false
+  zIndex: 9999
+  mobile: false
+
+click_heart:
+  enable: true
+  mobile: true
+
+clickShowText:
+  enable: false
+  text:
+  fontSize: 15px
+  random: false
+  mobile: false
+
+# ========== Lightbox（灯箱） ==========
+lightbox:
+
+# ========== 标签插件设置 ==========
+series:
+  enable: false
+  orderBy: 'title'
+  order: 1
+  number: true
+
+abcjs:
+  enable: false
+  per_page: true
+
+mermaid:
+  enable: false
+  code_write: false
+  theme:
+    light: default
+    dark: dark
+
+chartjs:
+  enable: false
+  fontColor:
+    light: 'rgba(0, 0, 0, 0.8)'
+    dark: 'rgba(255, 255, 255, 0.8)'
+  borderColor:
+    light: 'rgba(0, 0, 0, 0.1)'
+    dark: 'rgba(255, 255, 255, 0.2)'
+  scale_ticks_backdropColor:
+    light: 'transparent'
+    dark: 'transparent'
+
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+
+pjax:
+  enable: false
+  exclude:
+
+aplayerInject:
+  enable: false
+  per_page: true
+
+snackbar:
+  enable: false
+  position: bottom-left
+  bg_light: '#49b1f5'
+  bg_dark: '#1f1f1f'
+
+# ========== 性能优化 ==========
+instantpage: true                  # 鼠标悬停0.5秒后预加载页面
+
+lazyload:
+  enable: true                     # 图片懒加载
+  field: site
+  placeholder:
+  blur: true                       # 模糊占位效果
+
+pwa:
+  enable: false                    # 需要先准备manifest.json和图标
+  manifest: /manifest.json
+  apple_touch_icon: /img/icon-192.png
+  favicon_32_32: /img/icon-32.png
+  favicon_16_16: /img/icon-16.png
+  mask_icon: /img/icon-safari.png
+
+# ========== SEO 优化 ==========
+Open_Graph_meta:
+  enable: true
+  option:
+    twitter_card: summary_large_image
+    twitter_image: /img/【哲风壁纸】AI-紫色系人物.png
+    twitter_image_width: 1200
+    twitter_image_height: 600
+
+structured_data: true
+
+site_verification:
+  - name: google-site-verification
+    content: YOUR_GOOGLE_VERIFICATION_CODE
+  - name: baidu-site-verification
+    content: YOUR_BAIDU_VERIFICATION_CODE
+
+# ========== 附加功能 ==========
+version: true
+option:
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+  twikoo: https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js
