@@ -110,7 +110,7 @@ theme: butterfly                  # 使用的主题（Butterfly）
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'                     # 部署方式（Git）
-  repo: git@github.com:MY-Final/MY-Final.github.io.git  # 仓库地址
+  repo: https://github.com/MY-Final/MY-Final.github.io.git  # 仓库地址
   branch: main                    # 部署分支
 
 # ========== 本地搜索配置 ==========
