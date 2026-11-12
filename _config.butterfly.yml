@@ -183,12 +183,12 @@ aside:
 
   card_author:
     enable: true
-    description: 小菜日记
+    description: 我在无数时间线里面找到了一条属于自己的时间线
     button:
       enable: true
       icon: fab fa-github
       text: 给star！求求啦！
-      link: https://github.com/MY-Final
+      link: https://github.com/MY-Final/MY-Final.github.io
 
   card_announcement:
     enable: true
