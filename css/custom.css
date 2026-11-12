@@ -1,0 +1,377 @@
+/* ==========================================================================
+   Footer — glass colophon
+   A quiet signature over the artwork: one translucent capsule, no banner.
+   ========================================================================== */
+
+#footer {
+  position: relative;
+  padding: 22px 16px 30px;
+  background: transparent;
+  border: 0;
+  overflow: visible;
+}
+
+#footer-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 9px 20px 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 12px 34px rgba(70, 40, 110, 0.12);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  color: #51436e;
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+
+/* small gradient dot — the only decoration */
+#footer-wrap::before {
+  content: "";
+  flex: 0 0 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8a2be2, #ba55d3);
+  box-shadow: 0 0 0 3px rgba(147, 112, 219, 0.12);
+}
+
+#footer #footer-wrap .copyright,
+#footer #footer-wrap .framework-info,
+#footer #footer-wrap .footer_custom_text {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-shadow: none;
+}
+
+#footer-wrap a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(147, 112, 219, 0.25);
+  transition: border-color 0.2s ease;
+}
+
+#footer-wrap a:hover {
+  border-bottom-color: currentColor;
+}
+
+[data-theme="dark"] #footer-wrap {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(18, 16, 24, 0.58);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 36px rgba(0, 0, 0, 0.3);
+  color: #d6cde8;
+}
+
+[data-theme="dark"] #footer-wrap::before {
+  background: linear-gradient(135deg, #b39ddb, #d1b3ff);
+  box-shadow: 0 0 0 3px rgba(179, 157, 219, 0.14);
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 16px 12px 24px;
+  }
+
+  #footer-wrap {
+    gap: 8px;
+    max-width: calc(100% - 24px);
+    padding: 8px 14px 9px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #footer-wrap a {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   Hero — keep the artwork, make the title readable
+   ========================================================================== */
+
+#page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 19, 46, 0.34) 0%,
+    rgba(28, 19, 46, 0.08) 42%,
+    rgba(28, 19, 46, 0.44) 100%
+  );
+}
+
+#page-header #site-info {
+  z-index: 2;
+}
+
+#page-header #site-title {
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-shadow:
+    0 2px 16px rgba(20, 12, 36, 0.6),
+    0 1px 2px rgba(20, 12, 36, 0.4);
+}
+
+#page-header #site-subtitle {
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-shadow:
+    0 2px 12px rgba(20, 12, 36, 0.55),
+    0 1px 2px rgba(20, 12, 36, 0.35);
+}
+
+/* ========== 代码块样式优化 ========== */
+
+/* 代码块整体容器 */
+figure.highlight {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  margin: 20px 0 !important;
+  overflow: hidden !important;
+}
+
+/* 代码块工具栏（语言标签区域） */
+figure.highlight .highlight-tools {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  padding: 8px 16px !important;
+  border-bottom: none !important;
+}
+
+figure.highlight .highlight-tools .code-lang {
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+figure.highlight .highlight-tools .copy-button {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+figure.highlight .highlight-tools .copy-button:hover {
+  color: #fff !important;
+}
+
+/* 代码表格布局 */
+figure.highlight table {
+  width: 100% !important;
+}
+
+/* 行号区域 */
+figure.highlight .gutter {
+  background: #f1f5f9 !important;
+  padding: 12px 12px 12px 16px !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+figure.highlight .gutter pre {
+  color: #94a3b8 !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+/* 代码内容区域 */
+figure.highlight .code {
+  background: #f8fafc !important;
+  padding: 12px 16px !important;
+}
+
+figure.highlight .code pre {
+  color: #334155 !important;
+  line-height: 1.7 !important;
+}
+
+/* 滚动条美化 */
+figure.highlight::-webkit-scrollbar,
+figure.highlight pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+figure.highlight::-webkit-scrollbar-thumb,
+figure.highlight pre::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+figure.highlight::-webkit-scrollbar-thumb:hover,
+figure.highlight pre::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========== 语法高亮颜色 ========== */
+
+/* 注释 */
+figure.highlight .hljs-comment,
+figure.highlight .comment {
+  color: #94a3b8 !important;
+  font-style: italic !important;
+}
+
+/* 关键字 */
+figure.highlight .hljs-keyword,
+figure.highlight .keyword {
+  color: #8b5cf6 !important;
+  font-weight: 600 !important;
+}
+
+/* 字符串 */
+figure.highlight .hljs-string,
+figure.highlight .string {
+  color: #10b981 !important;
+}
+
+/* 数字 */
+figure.highlight .hljs-number,
+figure.highlight .number {
+  color: #f59e0b !important;
+}
+
+/* 函数名 */
+figure.highlight .hljs-function,
+figure.highlight .hljs-title,
+figure.highlight .function,
+figure.highlight .title {
+  color: #3b82f6 !important;
+}
+
+/* 类名 */
+figure.highlight .hljs-class,
+figure.highlight .class {
+  color: #ec4899 !important;
+}
+
+/* 变量 */
+figure.highlight .hljs-variable,
+figure.highlight .variable {
+  color: #ef4444 !important;
+}
+
+/* 内置函数 */
+figure.highlight .hljs-built_in,
+figure.highlight .built_in {
+  color: #06b6d4 !important;
+}
+
+/* 属性 */
+figure.highlight .hljs-attr,
+figure.highlight .attr {
+  color: #f97316 !important;
+}
+
+/* 标签 */
+figure.highlight .hljs-tag,
+figure.highlight .tag {
+  color: #ef4444 !important;
+}
+
+/* 操作符 */
+figure.highlight .hljs-operator,
+figure.highlight .operator {
+  color: #64748b !important;
+}
+
+/* ========== 行内代码样式 ========== */
+p code, li code, td code, h1 code, h2 code, h3 code, h4 code {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fdf4ff 100%) !important;
+  color: #7c3aed !important;
+  padding: 3px 8px !important;
+  border-radius: 5px !important;
+  font-size: 0.9em !important;
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace !important;
+  border: 1px solid #e9d5ff !important;
+  font-weight: 500 !important;
+}
+
+/* ========== 深色模式 ========== */
+[data-theme="dark"] figure.highlight {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] figure.highlight .gutter {
+  background: #0f172a !important;
+  border-right-color: #334155 !important;
+}
+
+[data-theme="dark"] figure.highlight .gutter pre {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] figure.highlight .code {
+  background: #1e293b !important;
+}
+
+[data-theme="dark"] figure.highlight .code pre {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] figure.highlight .hljs-comment,
+[data-theme="dark"] figure.highlight .comment {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] figure.highlight .hljs-keyword,
+[data-theme="dark"] figure.highlight .keyword {
+  color: #a78bfa !important;
+}
+
+[data-theme="dark"] figure.highlight .hljs-string,
+[data-theme="dark"] figure.highlight .string {
+  color: #34d399 !important;
+}
+
+[data-theme="dark"] figure.highlight .hljs-number,
+[data-theme="dark"] figure.highlight .number {
+  color: #fbbf24 !important;
+}
+
+[data-theme="dark"] figure.highlight .hljs-function,
+[data-theme="dark"] figure.highlight .hljs-title,
+[data-theme="dark"] figure.highlight .function,
+[data-theme="dark"] figure.highlight .title {
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] p code,
+[data-theme="dark"] li code,
+[data-theme="dark"] td code {
+  background: rgba(139, 92, 246, 0.15) !important;
+  color: #c4b5fd !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+[data-theme="dark"] figure.highlight::-webkit-scrollbar-thumb,
+[data-theme="dark"] figure.highlight pre::-webkit-scrollbar-thumb {
+  background: #475569;
+}
