@@ -445,8 +445,8 @@ fireworks:
   mobile: false
 
 click_heart:
-  enable: true
-  mobile: true
+  enable: false
+  mobile: false
 
 clickShowText:
   enable: false
