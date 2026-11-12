@@ -94,8 +94,8 @@ index_site_info_top:
 index_top_img_height:
 
 subtitle:
-  enable: true
-  effect: true
+  enable: false
+  effect: false
   typed_option:
     loop: true
     typeSpeed: 100

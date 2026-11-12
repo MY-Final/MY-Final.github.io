@@ -124,8 +124,9 @@
   );
 }
 
+/* 首页只保留背景图，不显示站点标题 */
 #page-header #site-info {
-  z-index: 2;
+  display: none;
 }
 
 #page-header #site-title {
