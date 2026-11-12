@@ -33,7 +33,7 @@ description: "Final 的个人简介 - 个人技术博客与生活笔记"
 
 ### 📝 博客信息
 
-- 域名：myfinal.xyz
+- 域名：120403.xyz
 - 建站时间：2019年
 - 主题：Butterfly (Hexo)
 

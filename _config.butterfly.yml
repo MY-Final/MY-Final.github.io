@@ -15,7 +15,6 @@ menu:                            # 导航菜单配置
   归档: /archives/ || fas fa-archive
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
-  留言板: /messageboard/ || fas fa-comment
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
@@ -201,12 +200,6 @@ aside:
     sort: date
     sort_order:
 
-  card_newest_comments:
-    enable: false
-    limit: 6
-    storage: 10
-    avatar: true
-
   card_categories:
     enable: true
     limit: 8
@@ -326,13 +319,6 @@ share:
 
   addtoany:
     item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
-
-# ========== 评论系统 ==========
-comments:
-  text: true
-  lazyload: false
-  count: true
-  card_post_count: true
 
 # ========== 聊天服务 ==========
 chat:
@@ -550,14 +536,7 @@ Open_Graph_meta:
 
 structured_data: true
 
-site_verification:
-  - name: google-site-verification
-    content: YOUR_GOOGLE_VERIFICATION_CODE
-  - name: baidu-site-verification
-    content: YOUR_BAIDU_VERIFICATION_CODE
-
 # ========== 附加功能 ==========
 version: true
 option:
   busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-  twikoo: https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js

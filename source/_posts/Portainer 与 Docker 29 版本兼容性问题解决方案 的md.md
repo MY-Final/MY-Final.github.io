@@ -53,12 +53,7 @@ sudo systemctl restart docker
 
 ---
 
-## 4. 验证结果
+## 3. 验证结果
 
 重启 Docker 后，Portainer 将重新建立与本地 Docker 引擎的连接。  
 访问 Portainer UI，你将看到 Local 环境已恢复可用。
-
----
-
-[Docker-CE 安装指南](../../docker%20安装/Docker-CE%20安装指南.md)
-[Portainer 安装](Portainer%20安装.md)
