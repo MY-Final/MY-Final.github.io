@@ -36,23 +36,23 @@ social:
   fas fa-envelope: mailto:my3486159271@gmail.com || Email || '#4a7dbe'
 
 # ========== 头像与图标设置 ==========
-favicon: /img/【哲风壁纸】个性头像-人物 (1).png
+favicon: /img/favicon.png
 
 avatar:
-  img: /img/【哲风壁纸】个性头像-人物 (1).png
+  img: /img/avatar.webp
   effect: false
 
 # ========== 顶部横幅图片设置 ==========
 disable_top_img: false
-default_top_img: /img/【哲风壁纸】AI-紫色系人物.png
-index_img: /img/【哲风壁纸】SNAFFUR-动漫少女.png
-archive_img: /img/【哲风壁纸】瞳-红色.png
-tag_img: /img/【哲风壁纸】AI-紫色系人物.png
+default_top_img: /img/hero-purple.webp
+index_img: /img/hero-index.webp
+archive_img: /img/hero-archive.webp
+tag_img: /img/hero-purple.webp
 tag_per_img:
-category_img: /img/【哲风壁纸】AI-紫色系人物.png
+category_img: /img/hero-purple.webp
 category_per_img:
 footer_img: false
-background: '/img/【哲风壁纸】二次元-原神-躺姿.png'
+background: '/img/background.webp'
 
 cover:
   index_enable: true
@@ -517,22 +517,15 @@ lazyload:
   placeholder:
   blur: true                       # 模糊占位效果
 
-pwa:
-  enable: false                    # 需要先准备manifest.json和图标
-  manifest: /manifest.json
-  apple_touch_icon: /img/icon-192.png
-  favicon_32_32: /img/icon-32.png
-  favicon_16_16: /img/icon-16.png
-  mask_icon: /img/icon-safari.png
-
 # ========== SEO 优化 ==========
 Open_Graph_meta:
   enable: true
   option:
     twitter_card: summary_large_image
-    twitter_image: /img/【哲风壁纸】AI-紫色系人物.png
+    image: /img/og-cover.jpg
+    twitter_image: /img/og-cover.jpg
     twitter_image_width: 1200
-    twitter_image_height: 600
+    twitter_image_height: 630
 
 structured_data: true
 
@@ -540,3 +533,8 @@ structured_data: true
 version: true
 option:
   busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+
+# ========== 自定义资源注入 ==========
+inject:
+  head:
+    - '<link rel="stylesheet" href="/css/custom.css">'

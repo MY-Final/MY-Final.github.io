@@ -5,6 +5,7 @@ tags:
   - n8n
 categories:
   - n8n
+description: 记录 n8n 的 npm 全局安装、自定义节点本地 link 调试与启动流程。
 ---
 ## 1：Install n8n using npm
 ```bash

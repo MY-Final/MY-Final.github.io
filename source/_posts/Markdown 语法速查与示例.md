@@ -1,6 +1,6 @@
 ---
 title: Markdown 语法速查与示例
-author: Yang
+author: Final
 date: 2025-06-06
 updated: 2025-06-06
 tags:
@@ -11,7 +11,7 @@ categories:
   - 教程
 keywords: Markdown, 语法, 教程, Hexo
 description: 一篇全面展示 Markdown 语法特性的示例文章，适合作为语法速查手册。
-cover: /img/【哲风壁纸】二次元人物-动画美图.png
+cover: /img/hero-markdown.webp
 toc: true
 toc_number: true
 mathjax: true
@@ -99,7 +99,7 @@ public class HelloWorld {
 
 ### 图片
 
-![示例图片](/source/img/【哲风壁纸】原神-雷电将军.png)
+![示例图片](/img/post/raiden.webp)
 
 ## 表格
 

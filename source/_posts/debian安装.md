@@ -3,13 +3,13 @@ title: Debian 系统安装完整指南
 date: 2026-01-21 10:00:00
 tags: [Linux, Debian, 系统安装]
 categories: [Linux]
-description: 本文详细记录了 Debian 13 (Bookworm) 系统的完整安装过程，包含从准备工作到安装完成的每一步操作。适用于桌面用户和服务器部署场景。
-cover: /img/debian-install/选择安装模式.png
+description: 本文详细记录了 Debian 13 (Trixie) 系统的完整安装过程，包含从准备工作到安装完成的每一步操作。适用于桌面用户和服务器部署场景。
+cover: /img/debian-install/01-select-install-mode.webp
 ---
 
-**简介**：本文详细记录了 Debian 13 (Bookworm) 系统的完整安装过程，包含从准备工作到安装完成的每一步操作。适用于桌面用户和服务器部署场景。
+**简介**：本文详细记录了 Debian 13 (Trixie) 系统的完整安装过程，包含从准备工作到安装完成的每一步操作。适用于桌面用户和服务器部署场景。
 
-**适用版本**：Debian 13 (Bookworm)  
+**适用版本**：Debian 13 (Trixie)  
 **安装方式**：U盘启动安装  
 **预计时间**：30-60 分钟  
 **难度等级**：初级
@@ -53,50 +53,50 @@ cover: /img/debian-install/选择安装模式.png
 #### 步骤 1：选择安装模式
 选择 **"Graphical install"**（图形化安装）或 **"Install"**（文本安装），推荐使用图形化安装界面。
 
-![选择安装模式](/img/debian-install/选择安装模式.png)
+![选择安装模式](/img/debian-install/01-select-install-mode.webp)
 
 ### 2.2 基础配置
 
 #### 步骤 2：选择语言
 选择系统使用的语言，建议选择 **"中文(简体)"**。
 
-![选择语言](/img/debian-install/选择语言.png)
+![选择语言](/img/debian-install/02-select-language.webp)
 
 #### 步骤 3：选择时区
 选择所在的时区，中国大陆地区选择 **"亚洲/上海"**。
 
-![选择时区](/img/debian-install/选择时区.png)
+![选择时区](/img/debian-install/03-select-timezone.webp)
 
 #### 步骤 4：配置键盘
 选择键盘布局，通常选择 **"汉语"** 或 **"美国英语"**。
 
-![配置键盘](/img/debian-install/配置键盘.png)
+![配置键盘](/img/debian-install/04-configure-keyboard.webp)
 
 ### 2.3 系统识别
 
 #### 步骤 5：识别安装介质
 系统正在识别安装介质和硬件设备，**请耐心等待进度条完成**。
 
-![识别介质](/img/debian-install/识别介质.png)
+![识别介质](/img/debian-install/05-detect-media.webp)
 
 ### 2.4 网络与主机名配置
 
 #### 步骤 6：设置主机名
 输入计算机的名称（主机名），建议使用有意义的名称，如 `debian-desktop` 或 `my-server`。
 
-![设置主机名](/img/debian-install/设置主机名.png)
+![设置主机名](/img/debian-install/06-hostname.webp)
 
 #### 步骤 7：设置域名（可选）
 此步骤为可选配置。如果不需要设置域名，可以直接点击 **"继续"** 跳过。
 
-![设置域名](/img/debian-install/设置域名.png)
+![设置域名](/img/debian-install/07-domain.webp)
 
 ### 2.5 用户账户配置
 
 #### 步骤 8：设置 root 密码
 设置系统管理员（root）密码。**请务必记住此密码**，后续系统管理会用到。
 
-![设置root密码](/img/debian-install/设置root密码.png)
+![设置root密码](/img/debian-install/08-root-password.webp)
 
 #### 步骤 9：创建普通用户
 创建一个日常使用的普通用户账户：
@@ -104,69 +104,69 @@ cover: /img/debian-install/选择安装模式.png
 - 设置用户名（建议使用英文小写字母）
 - 设置用户密码
 
-![创建用户1](/img/debian-install/创建用户1.png)
+![创建用户1](/img/debian-install/09-create-user-1.webp)
 
-![创建用户2](/img/debian-install/创建用户2.png)
+![创建用户2](/img/debian-install/10-create-user-2.webp)
 
 ### 2.6 磁盘分区
 
 #### 步骤 10：时间设置与磁盘分析
 系统正在设置时间并分析磁盘分区情况。
 
-![磁盘分析](/img/debian-install/磁盘分析.png)
+![磁盘分析](/img/debian-install/11-disk-analysis.webp)
 
 #### 步骤 11：选择分区方式
 选择 **"使用整个磁盘"**，这将清除磁盘上的所有数据并重新分区。
 
-![使用整个磁盘](/img/debian-install/使用整个磁盘.png)
+![使用整个磁盘](/img/debian-install/12-use-entire-disk.webp)
 
 选择要安装的磁盘（如果有多个磁盘）：
 
-![选择磁盘](/img/debian-install/选择磁盘.png)
+![选择磁盘](/img/debian-install/13-select-disk.webp)
 
-#### 步骤 13：分区方案
+#### 步骤 12：分区方案
 推荐选择 **"将所有文件放在同一个分区中"**（推荐新手使用），这样系统会自动创建合理的分区结构。
 
-![分区方案](/img/debian-install/分区方案.png)
+![分区方案](/img/debian-install/14-partition-scheme.webp)
 
 点击 **"下一步"** 继续。
 
-![确认分区](/img/debian-install/确认分区.png)
+![确认分区](/img/debian-install/15-confirm-partition.webp)
 
 系统会提示将修改磁盘分区表，选择 **"是"** 确认继续。
 
-![确认修改](/img/debian-install/确认修改.png)
+![确认修改](/img/debian-install/16-confirm-write.webp)
 
 ### 2.7 软件包配置
 
 #### 步骤 13：安装基本系统
 系统开始安装基本系统文件，此过程需要一些时间。
 
-![安装基本系统](/img/debian-install/安装基本系统.png)
+![安装基本系统](/img/debian-install/17-install-base-system.webp)
 
 #### 步骤 14：配置软件包管理器
 选择是否使用网络镜像源。**建议选择"是"**，这样可以获取最新的软件包。
 
-![使用网络镜像](/img/debian-install/使用网络镜像.png)
+![使用网络镜像](/img/debian-install/18-network-mirror.webp)
 
 #### 步骤 15：选择镜像站点
 选择软件源镜像站点。**推荐选择南大镜像**（mirrors.nju.edu.cn）或清华镜像，下载速度较快。
 
-![镜像站点](/img/debian-install/镜像站点.png)
+![镜像站点](/img/debian-install/19-mirror-site.webp)
 
 选择南大镜像：
 
-![南大镜像](/img/debian-install/南大镜像.png)
+![南大镜像](/img/debian-install/20-nju-mirror.webp)
 
 #### 步骤 16：HTTP 代理配置
 如果有代理服务器，在此处填写代理地址；否则直接点击 **"继续"** 跳过。
 
-![代理配置](/img/debian-install/代理配置.png)
+![代理配置](/img/debian-install/21-proxy.webp)
 
 #### 步骤 17：参与流行度调查
 **建议选择"否"**，不参与软件包使用情况调查。
 
-![流行度调查](/img/debian-install/流行度调查.png)
+![流行度调查](/img/debian-install/22-popularity-contest.webp)
 
 ### 2.8 软件选择
 
@@ -180,40 +180,40 @@ cover: /img/debian-install/选择安装模式.png
 
 **服务器用户**：可以不勾选桌面环境，只保留标准系统工具。
 
-![软件选择](/img/debian-install/软件选择.png)
+![软件选择](/img/debian-install/23-software-selection.webp)
 
 ### 2.9 引导程序安装
 
 #### 步骤 19：安装 GRUB 引导器
 选择安装 GRUB 引导器的位置。**建议选择主磁盘**（通常是 `/dev/sda` 或 `/dev/nvme0n1`）。
 
-![安装GRUB](/img/debian-install/安装GRUB.png)
+![安装GRUB](/img/debian-install/24-install-grub.webp)
 
 选择要安装 GRUB 的磁盘，比如 `/dev/sda`，然后点击 **"继续"**。
 
-![选择GRUB磁盘](/img/debian-install/选择GRUB磁盘.png)
+![选择GRUB磁盘](/img/debian-install/25-select-grub-disk.webp)
 
 ### 2.10 完成安装
 
 #### 步骤 20：安装完成
 系统提示安装完成，**请拔出 U 盘**，然后点击 **"继续"** 重启系统。
 
-![安装完成](/img/debian-install/安装完成.png)
+![安装完成](/img/debian-install/26-install-complete.webp)
 
 #### 步骤 21：首次启动
 重启后进入 GRUB 引导菜单，选择第一个选项 **"Debian GNU/Linux"** 启动系统。
 
-![GRUB菜单](/img/debian-install/GRUB菜单.png)
+![GRUB菜单](/img/debian-install/27-grub-menu.webp)
 
 #### 步骤 22：登录系统
 输入之前创建的用户名和密码登录系统。
 
-![登录界面](/img/debian-install/登录界面.png)
+![登录界面](/img/debian-install/28-login.webp)
 
 #### 步骤 23：进入桌面
 成功进入 Debian 桌面环境，安装完成！
 
-![桌面环境](/img/debian-install/桌面环境.png)
+![桌面环境](/img/debian-install/29-desktop.webp)
 
 ---
 
@@ -285,10 +285,10 @@ sudo nano /etc/apt/sources.list
 
 将内容替换为（以清华镜像为例）：
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ trixie-backports main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security trixie-security main contrib non-free non-free-firmware
 ```
 
 更新软件包列表：
@@ -494,6 +494,6 @@ sudo apt autoremove
 
 **最后更新**：2026年1月  
 **文档版本**：1.0  
-**作者**：基于用户提供的原始文档整理
+**作者**：Final
 
 *祝你使用 Debian 系统愉快！如有问题，欢迎查阅官方文档或社区支持。*

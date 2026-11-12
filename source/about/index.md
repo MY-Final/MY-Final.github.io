@@ -2,7 +2,7 @@
 title: 关于我
 date: 2025-06-05 16:16:46
 type: "about"
-top_img: /img/【哲风壁纸】中二病-小鸟游六花.png
+top_img: /img/hero-about.webp
 description: "Final 的个人简介 - 个人技术博客与生活笔记"
 ---
 
