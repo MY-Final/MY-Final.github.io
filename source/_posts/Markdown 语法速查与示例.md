@@ -2,7 +2,7 @@
 title: Markdown 语法速查与示例
 author: Final
 date: 2025-06-06
-updated: 2025-06-06
+updated: 2026-11-12
 tags:
   - Markdown
   - 教程
@@ -10,14 +10,14 @@ tags:
 categories:
   - 教程
 keywords: Markdown, 语法, 教程, Hexo
-description: 一篇全面展示 Markdown 语法特性的示例文章，适合作为语法速查手册。
+description: 一篇覆盖常用 Markdown 语法和 Hexo 扩展标签的速查手册，适合写作时随手查阅。
 cover: /img/hero-markdown.webp
 toc: true
 toc_number: true
 mathjax: true
 ---
 
-欢迎来到我的博客！这是一篇 Markdown 语法速查文章，涵盖常用语法和 Hexo 扩展特性。
+这篇速查手册整理了我在 Hexo 里常用的 Markdown 语法和主题扩展标签。日常写作遇到不确定的写法时，回来查一眼即可。
 
 <!-- more -->
 
@@ -115,7 +115,7 @@ public class HelloWorld {
 
 ## 脚注
 
-这是一个带脚注的文本[^1]。
+这是一个带脚注的句子[^1]。
 
 [^1]: 这是脚注的内容。
 
@@ -124,15 +124,15 @@ public class HelloWorld {
 ### 提示块（Note）
 
 {% note info %}
-这是一条信息提示。
+这是一条信息提示，用来补充背景。
 {% endnote %}
 
 {% note warning %}
-这是一条警告提示。
+这是一条警告提示，用来提醒风险。
 {% endnote %}
 
 {% note success %}
-这是一条成功提示。
+这是一条成功提示，用来确认结果。
 {% endnote %}
 
 ### 标签（Label）
@@ -145,7 +145,7 @@ public class HelloWorld {
 
 ## 数学公式
 
-> ⚠️ 需安装 [hexo-filter-mathjax](https://github.com/next-theme/hexo-filter-mathjax) 或 KaTeX 插件才能正常渲染。
+> 本站使用 `hexo-filter-mathjax` 渲染公式；如果公式没有正常显示，先检查插件是否启用。
 
 行内公式：$E = mc^2$
 
@@ -158,13 +158,14 @@ $$
 ## 总结
 
 本文涵盖了 Markdown 的核心语法：
+
 - 文本格式与列表
 - 代码块与引用
 - 表格与链接
 - Hexo 扩展标签
 
-更多语法请参考 [Markdown 官方文档](https://www.markdownguide.org/)。
+更多语法请参考 [Markdown Guide](https://www.markdownguide.org/)。
 
 ---
 
-感谢阅读！🎉
+写到哪查到哪，慢慢就熟了。
