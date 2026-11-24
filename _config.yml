@@ -73,6 +73,13 @@ meta_generator: false             # 【SEO优化】关闭Hexo生成器标签（�
 sitemap:
   path: sitemap.xml               # 网站地图（提交给Google/Bing）
 
+# ========== RSS 订阅 ==========
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: true                   # 输出全文，便于阅读器直接阅读
+
 # ========== 日期时间格式 ==========
 # Date / Time format
 date_format: YYYY-MM-DD           # 日期格式（2025-06-17）

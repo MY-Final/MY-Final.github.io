@@ -34,6 +34,7 @@ social:
   fab fa-github: https://github.com/MY-Final || Github || '#24292e'
   fab fa-twitter: https://twitter.com/my_final_my || Twitter || '#1DA1F2'
   fas fa-envelope: mailto:my3486159271@gmail.com || Email || '#4a7dbe'
+  fas fa-rss: /atom.xml || RSS || '#f26522'
 
 # ========== 头像与图标设置 ==========
 favicon: /img/favicon.png
@@ -61,13 +62,13 @@ cover:
   default_cover:
 
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: /img/favicon.png
+  post_page: /img/hero-purple.webp
 
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
-  background: /img/error-page.png
+  enable: true
+  subtitle: '页面走丢了'
+  background: /img/hero-purple.webp
 
 # 文章元数据显示位置
 post_meta:
@@ -116,7 +117,7 @@ index_post_content:
 toc:
   post: true
   page: false
-  number: true
+  number: false
   expand: false
   style_simple: false
   scroll_percent: true
@@ -251,7 +252,7 @@ readmode: true
 darkmode:
   enable: true
   button: true
-  autoChangeMode: false
+  autoChangeMode: 1
   start:
   end:
 
@@ -508,6 +509,13 @@ snackbar:
   bg_light: '#49b1f5'
   bg_dark: '#1f1f1f'
 
+# ========== CDN 设置 ==========
+# 第三方脚本改为本地加载，避免 jsDelivr 在部分网络下不可用
+CDN:
+  internal_provider: local
+  third_party_provider: local
+  version: false
+
 # ========== 性能优化 ==========
 instantpage: true                  # 鼠标悬停0.5秒后预加载页面
 
@@ -538,3 +546,4 @@ option:
 inject:
   head:
     - '<link rel="stylesheet" href="/css/custom.css">'
+    - '<link rel="alternate" type="application/atom+xml" title="Final" href="/atom.xml">'

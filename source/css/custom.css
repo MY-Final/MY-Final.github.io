@@ -129,6 +129,11 @@
   display: none;
 }
 
+/* 404 页只保留主题自带的错误内容 */
+.type-404 .page-title {
+  display: none;
+}
+
 #page-header #site-title {
   font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
   font-weight: 600;
@@ -161,25 +166,27 @@ figure.highlight {
 
 /* 代码块工具栏（语言标签区域） */
 figure.highlight .highlight-tools {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: #1e293b !important;
   padding: 8px 16px !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid #0f172a !important;
 }
 
 figure.highlight .highlight-tools .code-lang {
-  color: #fff !important;
+  color: #e2e8f0 !important;
+  font-family: 'JetBrains Mono', Consolas, Monaco, monospace !important;
   font-weight: 600 !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 0.08em !important;
 }
 
-figure.highlight .highlight-tools .copy-button {
-  color: rgba(255, 255, 255, 0.8) !important;
+figure.highlight .highlight-tools .copy-button,
+figure.highlight .highlight-tools .expand {
+  color: #94a3b8 !important;
 }
 
 figure.highlight .highlight-tools .copy-button:hover {
-  color: #fff !important;
+  color: #f8fafc !important;
 }
 
 /* 代码表格布局 */
@@ -318,6 +325,24 @@ p code, li code, td code, h1 code, h2 code, h3 code, h4 code {
   background: #1e293b !important;
   border-color: #334155 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] figure.highlight .highlight-tools {
+  background: #0f172a !important;
+  border-bottom-color: #334155 !important;
+}
+
+[data-theme="dark"] figure.highlight .highlight-tools .code-lang {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] figure.highlight .highlight-tools .copy-button,
+[data-theme="dark"] figure.highlight .highlight-tools .expand {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] figure.highlight .highlight-tools .copy-button:hover {
+  color: #e2e8f0 !important;
 }
 
 [data-theme="dark"] figure.highlight .gutter {
